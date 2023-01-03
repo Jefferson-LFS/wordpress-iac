@@ -1,0 +1,17 @@
+
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+Vagrant.configure("2") do |config|
+  config.vm.define "wp" do |wp|
+    wp.vm.hostname = "srvwordpress.myblog.com"
+    wp.vm.box = "ubuntu/focal64"
+    wp.vm.network 'private_network', ip: "10.10.10.101"
+    wp.vm.provision "shell", path: "wordpress-iac.sh"
+  end
+  config.vm.provider "virtualbox" do |v|
+  	v.memory = 2048
+  	v.cpus = 2
+  end
+end
