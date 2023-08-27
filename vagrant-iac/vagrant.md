@@ -21,8 +21,7 @@ fonte: https://developer.hashicorp.com/vagrant
 
 ```bash
 git clone https://github.com/Jefferson-LFS/wordpress-iac.git
-cd wordpress-iac
-cd vagrant-iac
+cd wordpress-iac/vagrant-iac
 ```
 
 #### Comandos
